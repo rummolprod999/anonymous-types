@@ -14,7 +14,6 @@ public class EnhancingListExample {
             List<String> strings = list.map(String::toUpperCase);
             strings.forEach(System.out::println);
         });
-
     }
 }
 
