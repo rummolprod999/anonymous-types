@@ -15,6 +15,11 @@ public class DucklikeExample {
         doDucklikeThings((Anon & Quacks & Waddles) i -> i);
     }
 
+    public static <Ducklike extends Quacks & Waddles> void doDucklikeThings(Ducklike ducklike) {
+        ducklike.quack();
+        ducklike.waddle();
+    }
+
     interface Quacks {
         default void quack() {
             System.out.println("Quack");
@@ -25,10 +30,5 @@ public class DucklikeExample {
         default void waddle() {
             System.out.println("Waddle");
         }
-    }
-
-    public static <Ducklike extends Quacks & Waddles> void doDucklikeThings(Ducklike ducklike) {
-        ducklike.quack();
-        ducklike.waddle();
     }
 }
