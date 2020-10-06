@@ -7,12 +7,7 @@ public class AnonymousTypes {
         consumer.accept(t);
     }
 
-    public interface Anon {
-        Object f(Object o);
-    }
-
     public static <T, U extends DelegatesTo<T>> void with(U u, Consumer<U> consumer) {
         consumer.accept(u);
     }
-
 }

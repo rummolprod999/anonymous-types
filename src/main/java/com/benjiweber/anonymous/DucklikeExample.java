@@ -1,7 +1,5 @@
 package com.benjiweber.anonymous;
 
-import com.benjiweber.anonymous.AnonymousTypes.Anon;
-
 import static com.benjiweber.anonymous.AnonymousTypes.with;
 import static java.lang.System.out;
 
@@ -21,17 +19,5 @@ public class DucklikeExample {
         out.println(ducklike.getClass());
         ducklike.quack();
         ducklike.waddle();
-    }
-
-    interface Quacks {
-        default void quack() {
-            out.println("Quack");
-        }
-    }
-
-    interface Waddles {
-        default void waddle() {
-            out.println("Waddle");
-        }
     }
 }
